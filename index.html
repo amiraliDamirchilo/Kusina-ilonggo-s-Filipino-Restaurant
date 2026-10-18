@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kusina Ilonggo's Filipino Restaurant | Ras Al Khaimah, UAE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ilonggo: {
+                            red: '#8B0000',
+                            brightRed: '#B91C1C',
+                            amber: '#D97706',
+                            gold: '#F59E0B',
+                            cream: '#FFFBEB',
+                            wood: '#451A03',
+                            woodDark: '#290E02',
+                            warmGray: '#F3F4F6'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Fredoka', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #290E02;
+            color: #FFFBEB;
+        }
+        .pattern-overlay {
+            background-color: #290e02;
+            background-image:  radial-gradient(#d97706 0.75px, transparent 0.75px), radial-gradient(#d97706 0.75px, #290e02 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0,15px 15px;
+            opacity: 0.95;
+        }
+        .glass-card {
+            background: rgba(69, 26, 3, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(217, 119, 6, 0.25);
+        }
+        .glass-nav {
+            background: rgba(41, 14, 2, 0.92);
+            backdrop-filter: blur(16px);
+        }
+        .badge-fiesta {
+            background: linear-gradient(135deg, #B91C1C 0%, #D97706 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #290E02;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D97706;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="pattern-overlay text-ilonggo-cream antialiased selection:bg-ilonggo-amber selection:text-ilonggo-woodDark">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-ilonggo-red via-ilonggo-amber to-ilonggo-red text-white py-2 px-4 text-center text-xs sm:text-sm font-semibold tracking-wide border-b border-ilonggo-gold/30">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <span class="hidden sm:inline"><i class="fa-solid fa-utensils mr-2"></i>Authentic Taste of Iloilo in Ras Al Khaimah!</span>
+            <span class="mx-auto sm:mx-0"><i class="fa-solid fa-phone mr-1"></i> Delivery & Orders: <strong>+971 50 408 2088</strong></span>
+            <span class="hidden md:inline text-ilonggo-cream/90"><i class="fa-solid fa-location-dot mr-1"></i> Julan, Al Nakheel, RAK</span>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 glass-nav border-b border-ilonggo-amber/30 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-ilonggo-amber to-ilonggo-red p-0.5 shadow-lg shadow-ilonggo-amber/20 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-ilonggo-woodDark rounded-[14px] flex items-center justify-center font-display text-2xl font-bold text-ilonggo-gold">
+                        K
+                    </div>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-display font-extrabold tracking-wide text-white block leading-tight">
+                        KUSINA <span class="text-ilonggo-gold">ILONGGO'S</span>
+                    </span>
+                    <span class="text-[10px] tracking-widest text-ilonggo-amber uppercase font-semibold block">Authentic Filipino Restaurant • RAK</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-wider font-bold text-ilonggo-cream/90">
+                <a href="#about" class="hover:text-ilonggo-gold transition-colors">Our Story</a>
+                <a href="#menu" class="hover:text-ilonggo-gold transition-colors">Fiesta Menu</a>
+                <a href="#boodle" class="hover:text-ilonggo-gold transition-colors">Boodle Fight</a>
+                <a href="#specialties" class="hover:text-ilonggo-gold transition-colors">House Specialties</a>
+                <a href="#reviews" class="hover:text-ilonggo-gold transition-colors">Community Reviews</a>
+                <a href="#contact" class="hover:text-ilonggo-gold transition-colors">Location</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+971504082088" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-ilonggo-amber via-ilonggo-gold to-ilonggo-amber text-ilonggo-woodDark font-display font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-md shadow-ilonggo-amber/30 flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="lg:hidden p-2 rounded-lg bg-ilonggo-wood border border-ilonggo-amber/40 text-ilonggo-gold focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-nav border-b border-ilonggo-amber/30 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-sm uppercase tracking-wider text-white font-semibold">Our Story</a>
+            <a href="#menu" class="block text-sm uppercase tracking-wider text-white font-semibold">Fiesta Menu</a>
+            <a href="#boodle" class="block text-sm uppercase tracking-wider text-white font-semibold">Boodle Fight Feast</a>
+            <a href="#specialties" class="block text-sm uppercase tracking-wider text-white font-semibold">House Specialties</a>
+            <a href="#reviews" class="block text-sm uppercase tracking-wider text-white font-semibold">Community Reviews</a>
+            <a href="#contact" class="block text-sm uppercase tracking-wider text-white font-semibold">Location & Contact</a>
+            <div class="pt-2">
+                <a href="tel:+971504082088" class="block text-center w-full py-3 rounded-xl bg-ilonggo-amber text-ilonggo-woodDark font-display font-bold text-xs uppercase tracking-wider">
+                    Call & Order Delivery
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section id="hero" class="relative py-16 lg:py-24 overflow-hidden border-b border-ilonggo-amber/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Text Content -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-ilonggo-red/40 border border-ilonggo-amber/40 text-ilonggo-gold text-xs font-semibold tracking-wider uppercase">
+                    <i class="fa-solid fa-heart text-ilonggo-brightRed"></i>
+                    Namit Gid! The Heart of Ilonggo Cooking in RAK
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl font-display font-extrabold text-white leading-tight">
+                    Home Cooking, <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-ilonggo-gold via-ilonggo-amber to-ilonggo-gold">
+                        Warm Hospitality & Pinoy Comfort
+                    </span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-ilonggo-cream/80 max-w-2xl font-light leading-relaxed">
+                    Craving authentic <strong class="text-ilonggo-gold font-semibold">Bacolod Chicken Inasal</strong>, steaming <strong class="text-ilonggo-gold font-semibold">La Paz Batchoy</strong>, rich <strong class="text-ilonggo-gold font-semibold">Kansi</strong>, or crispy <strong class="text-ilonggo-gold font-semibold">Sisig</strong>? Step into Kusina Ilonggo's in Julan, Ras Al Khaimah — where every meal feels like Sunday dinner at Lola's house.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#menu" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-ilonggo-amber to-ilonggo-gold text-ilonggo-woodDark font-display font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-lg shadow-ilonggo-amber/30 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Explore Full Menu</span>
+                    </a>
+                    <a href="#boodle" class="px-7 py-3.5 rounded-xl glass-card text-white font-display font-bold text-xs uppercase tracking-wider hover:bg-ilonggo-wood transition-all border border-ilonggo-amber/40 flex items-center gap-2">
+                        <i class="fa-solid fa-users text-ilonggo-gold"></i>
+                        <span>Boodle Fight Feast</span>
+                    </a>
+                </div>
+
+                <!-- Info Highlights Badges -->
+                <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-ilonggo-amber/20">
+                    <div class="glass-card p-3 rounded-xl border border-ilonggo-amber/20 text-center">
+                        <span class="block font-display text-2xl font-bold text-ilonggo-gold">4.9★</span>
+                        <span class="text-[11px] text-ilonggo-cream/70 uppercase">Google Reviews</span>
+                    </div>
+                    <div class="glass-card p-3 rounded-xl border border-ilonggo-amber/20 text-center">
+                        <span class="block font-display text-2xl font-bold text-ilonggo-gold">100%</span>
+                        <span class="text-[11px] text-ilonggo-cream/70 uppercase">Authentic Taste</span>
+                    </div>
+                    <div class="glass-card p-3 rounded-xl border border-ilonggo-amber/20 text-center">
+                        <span class="block font-display text-2xl font-bold text-ilonggo-gold">RAK</span>
+                        <span class="text-[11px] text-ilonggo-cream/70 uppercase">Island-Wide Delivery</span>
+                    </div>
+                    <div class="glass-card p-3 rounded-xl border border-ilonggo-amber/20 text-center">
+                        <span class="block font-display text-2xl font-bold text-ilonggo-gold">Daily</span>
+                        <span class="text-[11px] text-ilonggo-cream/70 uppercase">Freshly Prepared</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Featured Food Collage Display -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative z-10 space-y-4">
+                    <!-- Main Featured Dish Banner -->
+                    <div class="glass-card rounded-3xl p-4 border border-ilonggo-amber/40 shadow-2xl relative overflow-hidden group">
+                        <div class="h-64 sm:h-72 rounded-2xl bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-ilonggo-woodDark via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                                <div>
+                                    <span class="badge-fiesta px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-white">House Special</span>
+                                    <h3 class="font-display text-2xl font-bold text-white mt-1">Authentic Inasal & Sisig</h3>
+                                    <p class="text-xs text-ilonggo-cream/80">Marinated in native calamansi, lemongrass & annatto oil</p>
+                                </div>
+                                <span class="text-xl font-display font-extrabold text-ilonggo-gold bg-ilonggo-woodDark/90 px-3 py-1 rounded-xl border border-ilonggo-amber/30">AED 28</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Food Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-card rounded-2xl p-3 border border-ilonggo-amber/30 flex items-center gap-3">
+                            <div class="w-14 h-14 rounded-xl bg-ilonggo-red/50 flex items-center justify-center text-ilonggo-gold text-2xl shrink-0">
+                                <i class="fa-solid fa-bowl-hot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-sm text-white">La Paz Batchoy</h4>
+                                <span class="text-xs text-ilonggo-gold font-semibold">Rich Noodle Soup</span>
+                            </div>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-3 border border-ilonggo-amber/30 flex items-center gap-3">
+                            <div class="w-14 h-14 rounded-xl bg-ilonggo-amber/30 flex items-center justify-center text-ilonggo-gold text-2xl shrink-0">
+                                <i class="fa-solid fa-ice-cream"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-sm text-white">Halo-Halo Special</h4>
+                                <span class="text-xs text-ilonggo-gold font-semibold">Ube & Cream Dessert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: STORY & HERITAGE -->
+    <section id="about" class="py-20 relative bg-ilonggo-wood/40 border-b border-ilonggo-amber/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 relative">
+                    <div class="glass-card rounded-3xl p-6 border border-ilonggo-amber/30 space-y-4">
+                        <div class="h-80 rounded-2xl bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="bg-ilonggo-woodDark p-4 rounded-xl border border-ilonggo-amber/20 text-center">
+                            <p class="font-display text-lg text-ilonggo-gold font-bold">"Basta Ilonggo, Malambing kag Namit Magsugba!"</p>
+                            <p class="text-xs text-ilonggo-cream/70 mt-1">Known for gentle warmth, generous servings, and deep culinary tradition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-ilonggo-gold text-xs font-bold uppercase tracking-widest bg-ilonggo-red/40 px-3.5 py-1.5 rounded-full border border-ilonggo-amber/30">
+                        Our Culinary Roots
+                    </span>
+
+                    <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">
+                        Bringing the Flavorful Heritage of Iloilo to Ras Al Khaimah
+                    </h2>
+
+                    <p class="text-ilonggo-cream/80 text-sm sm:text-base leading-relaxed">
+                        Iloilo City in the Philippines is world-famous for its rich, slow-cooked soups, grilled specialties, and joyful food culture. At <strong class="text-white">Kusina Ilonggo's Filipino Restaurant</strong>, we bring these exact authentic recipes straight to our community in <strong class="text-ilonggo-gold">Julan - Al Nakheel, Ras Al Khaimah</strong>.
+                    </p>
+
+                    <p class="text-ilonggo-cream/80 text-sm sm:text-base leading-relaxed">
+                        Whether you are a Filipino kababayan looking for a taste of home or a local food enthusiast eager to discover authentic Southeast Asian comfort food, our doors are open with warm hospitality and freshly cooked dishes every single day.
+                    </p>
+
+                    <!-- Feature Pillars -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="glass-card p-4 rounded-2xl border border-ilonggo-amber/20">
+                            <i class="fa-solid fa-fire-burner text-ilonggo-gold text-2xl mb-2"></i>
+                            <h4 class="font-display font-bold text-sm text-white">Authentic Spices</h4>
+                            <p class="text-xs text-ilonggo-cream/70 mt-1">Lemongrass, native vinegar, annatto, and fresh calamansi.</p>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-2xl border border-ilonggo-amber/20">
+                            <i class="fa-solid fa-heart-pulse text-ilonggo-gold text-2xl mb-2"></i>
+                            <h4 class="font-display font-bold text-sm text-white">Made From Scratch</h4>
+                            <p class="text-xs text-ilonggo-cream/70 mt-1">Slow-simmered bone broths and hand-grilled charcoal meats.</p>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-2xl border border-ilonggo-amber/20">
+                            <i class="fa-solid fa-handshake-angle text-ilonggo-gold text-2xl mb-2"></i>
+                            <h4 class="font-display font-bold text-sm text-white">Family Atmosphere</h4>
+                            <p class="text-xs text-ilonggo-cream/70 mt-1">Welcoming, friendly, and generous pinoy portion sizes.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MENU HIGHLIGHTS WITH INTERACTIVE TABS -->
+    <section id="menu" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-ilonggo-gold text-xs font-bold uppercase tracking-widest bg-ilonggo-red/40 px-3.5 py-1.5 rounded-full border border-ilonggo-amber/30">
+                    Masarap & Sulit
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">Our Signature Menu</h2>
+                <p class="text-ilonggo-cream/70 text-sm">Every dish is prepared fresh upon order using genuine ingredients and secret family recipes.</p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10">
+                <button onclick="filterMenu('all')" class="menu-tab active px-5 py-2.5 rounded-full bg-ilonggo-amber text-ilonggo-woodDark font-display font-bold text-xs uppercase tracking-wider transition-all">All Dishes</button>
+                <button onclick="filterMenu('ilonggo')" class="menu-tab px-5 py-2.5 rounded-full glass-card text-ilonggo-cream hover:bg-ilonggo-wood font-display font-bold text-xs uppercase tracking-wider transition-all border border-ilonggo-amber/30">Ilonggo Classics</button>
+                <button onclick="filterMenu('grill')" class="menu-tab px-5 py-2.5 rounded-full glass-card text-ilonggo-cream hover:bg-ilonggo-wood font-display font-bold text-xs uppercase tracking-wider transition-all border border-ilonggo-amber/30">Charcoal Inasal & Grill</button>
+                <button onclick="filterMenu('soups')" class="menu-tab px-5 py-2.5 rounded-full glass-card text-ilonggo-cream hover:bg-ilonggo-wood font-display font-bold text-xs uppercase tracking-wider transition-all border border-ilonggo-amber/30">Steaming Soups</button>
+                <button onclick="filterMenu('desserts')" class="menu-tab px-5 py-2.5 rounded-full glass-card text-ilonggo-cream hover:bg-ilonggo-wood font-display font-bold text-xs uppercase tracking-wider transition-all border border-ilonggo-amber/30">Desserts & Refreshers</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Dish 1 -->
+                <div class="menu-item ilonggo grill glass-card rounded-3xl p-5 border border-ilonggo-amber/30 hover:border-ilonggo-gold transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="badge-fiesta text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">Bestseller</span>
+                            <span class="font-display font-bold text-lg text-ilonggo-gold">AED 26</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Bacolod Chicken Inasal</h3>
+                        <p class="text-xs text-ilonggo-cream/70 leading-relaxed mb-4">Quarter chicken marinated in calamansi, lemongrass, ginger, and coconut vinegar, basted with aromatic annatto chicken oil and grilled over open flame.</p>
+                    </div>
+                    <div class="pt-3 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <span class="text-[11px] text-ilonggo-gold font-semibold"><i class="fa-solid fa-bowl-rice mr-1"></i> Served with Garlic Rice</span>
+                        <a href="tel:+971504082088" class="text-xs font-bold text-white hover:text-ilonggo-gold">Order <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Dish 2 -->
+                <div class="menu-item ilonggo soups glass-card rounded-3xl p-5 border border-ilonggo-amber/30 hover:border-ilonggo-gold transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-ilonggo-red text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">Signature Soup</span>
+                            <span class="font-display font-bold text-lg text-ilonggo-gold">AED 28</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">La Paz Batchoy Special</h3>
+                        <p class="text-xs text-ilonggo-cream/70 leading-relaxed mb-4">Original Iloilo noodle soup rich broth topped with crushed chicharon, toasted garlic, scallions, tender beef strips, liver, and a fresh raw egg.</p>
+                    </div>
+                    <div class="pt-3 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <span class="text-[11px] text-ilonggo-gold font-semibold"><i class="fa-solid fa-fire mr-1"></i> Hot Steaming Broth</span>
+                        <a href="tel:+971504082088" class="text-xs font-bold text-white hover:text-ilonggo-gold">Order <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Dish 3 -->
+                <div class="menu-item ilonggo soups glass-card rounded-3xl p-5 border border-ilonggo-amber/30 hover:border-ilonggo-gold transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="badge-fiesta text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">Ilonggo Favorite</span>
+                            <span class="font-display font-bold text-lg text-ilonggo-gold">AED 38</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Ilonggo Beef Kansi</h3>
+                        <p class="text-xs text-ilonggo-cream/70 leading-relaxed mb-4">The ultimate comfort soup — slow-cooked beef shank with rich bone marrow sour broth seasoned with native batwan fruit and lemongrass.</p>
+                    </div>
+                    <div class="pt-3 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <span class="text-[11px] text-ilonggo-gold font-semibold"><i class="fa-solid fa-bone mr-1"></i> Rich Bone Marrow</span>
+                        <a href="tel:+971504082088" class="text-xs font-bold text-white hover:text-ilonggo-gold">Order <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Dish 4 -->
+                <div class="menu-item grill glass-card rounded-3xl p-5 border border-ilonggo-amber/30 hover:border-ilonggo-gold transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-ilonggo-red text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">Crispy Favorite</span>
+                            <span class="font-display font-bold text-lg text-ilonggo-gold">AED 32</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Sizzling Pork / Chicken Sisig</h3>
+                        <p class="text-xs text-ilonggo-cream/70 leading-relaxed mb-4">Finely chopped crispy meat tossed with onions, chili, calamansi, and signature creamy sauce served on a sizzling hot iron skillet.</p>
+                    </div>
+                    <div class="pt-3 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <span class="text-[11px] text-ilonggo-gold font-semibold"><i class="fa-solid fa-pepper-hot mr-1"></i> Spicy or Mild Option</span>
+                        <a href="tel:+971504082088" class="text-xs font-bold text-white hover:text-ilonggo-gold">Order <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Dish 5 -->
+                <div class="menu-item grill glass-card rounded-3xl p-5 border border-ilonggo-amber/30 hover:border-ilonggo-gold transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="badge-fiesta text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">Party Favorite</span>
+                            <span class="font-display font-bold text-lg text-ilonggo-gold">AED 55</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Crispy Pata (Whole)</h3>
+                        <p class="text-xs text-ilonggo-cream/70 leading-relaxed mb-4">Deep-fried golden pork leg with crackling skin and tender, melt-in-your-mouth meat. Served with spicy soy-vinegar dipping sauce.</p>
+                    </div>
+                    <div class="pt-3 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <span class="text-[11px] text-ilonggo-gold font-semibold"><i class="fa-solid fa-users mr-1"></i> Great for Sharing</span>
+                        <a href="tel:+971504082088" class="text-xs font-bold text-white hover:text-ilonggo-gold">Order <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Dish 6 -->
+                <div class="menu-item desserts glass-card rounded-3xl p-5 border border-ilonggo-amber/30 hover:border-ilonggo-gold transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-ilonggo-red text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">Cool Dessert</span>
+                            <span class="font-display font-bold text-lg text-ilonggo-gold">AED 18</span>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Special Halo-Halo Supreme</h3>
+                        <p class="text-xs text-ilonggo-cream/70 leading-relaxed mb-4">Shaved ice with sweetened bananas, jackfruit, leche flan, purple ube halaya, nata de coco, milk, and a scoop of velvety ube ice cream.</p>
+                    </div>
+                    <div class="pt-3 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <span class="text-[11px] text-ilonggo-gold font-semibold"><i class="fa-solid fa-ice-cream mr-1"></i> Refreshing Delight</span>
+                        <a href="tel:+971504082088" class="text-xs font-bold text-white hover:text-ilonggo-gold">Order <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: BOODLE FIGHT & CATERING -->
+    <section id="boodle" class="py-20 relative bg-ilonggo-wood/40 border-y border-ilonggo-amber/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-ilonggo-gold text-xs font-bold uppercase tracking-widest bg-ilonggo-red/40 px-3.5 py-1.5 rounded-full border border-ilonggo-amber/30">
+                        Traditional Boodle Fight
+                    </span>
+
+                    <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">
+                        Gather Your Friends for an Authentic Pinoy Feast!
+                    </h2>
+
+                    <p class="text-ilonggo-cream/80 text-sm sm:text-base leading-relaxed">
+                        Nothing brings people together like a traditional <strong class="text-white">Boodle Fight Feast</strong>! Laid out on fresh banana leaves, packed with Inasal chicken, grilled tilapia, crispy pata, garlic rice, salted eggs, eggplant, and mangoes. Eat with your hands (kamayan style) and celebrate!
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-ilonggo-amber/20 text-ilonggo-gold flex items-center justify-center shrink-0 border border-ilonggo-amber/40">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-white font-medium">Small Group Package (3–4 Persons) — AED 120</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-ilonggo-amber/20 text-ilonggo-gold flex items-center justify-center shrink-0 border border-ilonggo-amber/40">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-white font-medium">Family Fiesta Package (6–8 Persons) — AED 220</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-ilonggo-amber/20 text-ilonggo-gold flex items-center justify-center shrink-0 border border-ilonggo-amber/40">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-white font-medium">Custom Party Trays & Catering for RAK Events</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="tel:+971504082088" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-ilonggo-amber to-ilonggo-gold text-ilonggo-woodDark font-display font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-lg shadow-ilonggo-amber/30">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Reserve Boodle Table</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="glass-card p-6 rounded-3xl border border-ilonggo-amber/30 space-y-4">
+                        <div class="h-80 rounded-2xl bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="bg-ilonggo-woodDark/80 p-4 rounded-xl border border-ilonggo-amber/20 text-center">
+                            <span class="font-display text-white text-base font-bold block">Party Trays & Group Delivery Available</span>
+                            <span class="text-xs text-ilonggo-cream/70">Order 2 hours in advance for fresh preparation across Ras Al Khaimah.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: COMMUNITY REVIEWS -->
+    <section id="reviews" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-ilonggo-gold text-xs font-bold uppercase tracking-widest bg-ilonggo-red/40 px-3.5 py-1.5 rounded-full border border-ilonggo-amber/30">
+                    4.9★ Google Rating
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">Words From Our Diners</h2>
+                <p class="text-ilonggo-cream/70 text-sm">Read real feedback from our beloved customers in Ras Al Khaimah.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="glass-card p-6 rounded-3xl border border-ilonggo-amber/20 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-ilonggo-gold text-xs gap-1 mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-ilonggo-cream/80 italic leading-relaxed">
+                            "The best batchoy and chicken inasal in Ras Al Khaimah hands down! Broth was super rich and authentic. Reminds me so much of back home in Iloilo."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-display font-bold text-sm text-white">Maria Santos</h5>
+                            <span class="text-[11px] text-ilonggo-gold">RAK Resident</span>
+                        </div>
+                        <i class="fa-brands fa-google text-ilonggo-gold/60 text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-card p-6 rounded-3xl border border-ilonggo-amber/20 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-ilonggo-gold text-xs gap-1 mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-ilonggo-cream/80 italic leading-relaxed">
+                            "We ordered a Boodle Fight for our weekend birthday party in Al Nakheel. The portions were huge, presentation was awesome, and food was piping hot!"
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-display font-bold text-sm text-white">Mark D.</h5>
+                            <span class="text-[11px] text-ilonggo-gold">Google Reviewer</span>
+                        </div>
+                        <i class="fa-brands fa-google text-ilonggo-gold/60 text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-card p-6 rounded-3xl border border-ilonggo-amber/20 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-ilonggo-gold text-xs gap-1 mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-ilonggo-cream/80 italic leading-relaxed">
+                            "Very warm staff, quick delivery, and delicious crispy pata. Tried their Halo-Halo supreme afterwards and it hit the spot!"
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-ilonggo-amber/20 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-display font-bold text-sm text-white">Joy & Jun</h5>
+                            <span class="text-[11px] text-ilonggo-gold">Food Lovers</span>
+                        </div>
+                        <i class="fa-brands fa-google text-ilonggo-gold/60 text-lg"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: LOCATION, HOURS & CONTACT -->
+    <section id="contact" class="py-20 relative bg-ilonggo-wood/60 border-t border-ilonggo-amber/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-ilonggo-gold text-xs font-bold uppercase tracking-widest bg-ilonggo-red/40 px-3.5 py-1.5 rounded-full border border-ilonggo-amber/30">
+                            Visit Us In RAK
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white mt-3">Find Our Restaurant</h2>
+                        <p class="text-xs sm:text-sm text-ilonggo-cream/70 mt-1">Julan - Al Nakheel area, Emirate of Ras Al Khaimah, UAE</p>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-ilonggo-amber/20 text-ilonggo-gold flex items-center justify-center shrink-0 border border-ilonggo-amber/30">
+                                <i class="fa-solid fa-phone text-base"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block font-display">Call / WhatsApp Orders</strong>
+                                <a href="tel:+971504082088" class="text-ilonggo-gold hover:underline">+971 50 408 2088</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-ilonggo-amber/20 text-ilonggo-gold flex items-center justify-center shrink-0 border border-ilonggo-amber/30">
+                                <i class="fa-solid fa-clock text-base"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block font-display">Opening Hours</strong>
+                                <span>Open Daily: 10:00 AM – 11:00 PM</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-ilonggo-amber/20 text-ilonggo-gold flex items-center justify-center shrink-0 border border-ilonggo-amber/30">
+                                <i class="fa-solid fa-truck-ramp-box text-base"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block font-display">Delivery Radius</strong>
+                                <span>Al Nakheel, Julan, RAK City & surrounding areas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="https://maps.google.com/?cid=17186753612417891480" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-ilonggo-amber text-ilonggo-woodDark font-display font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Open on Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reservation / Order Form -->
+                <div class="lg:col-span-7">
+                    <form class="glass-card p-6 sm:p-8 rounded-3xl border border-ilonggo-amber/30 space-y-5" onsubmit="event.preventDefault(); handleFormSubmit();">
+                        <h3 class="text-2xl font-display font-bold text-white">Table Reservation or Delivery Request</h3>
+                        <p class="text-xs text-ilonggo-cream/70">Fill in your request below and we will confirm your order or table booking instantly.</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] text-ilonggo-gold uppercase font-bold mb-1">Your Name</label>
+                                <input type="text" id="cust-name" required placeholder="e.g. Juan Dela Cruz" class="w-full px-4 py-3 rounded-xl bg-ilonggo-woodDark border border-ilonggo-amber/30 text-xs text-white focus:outline-none focus:border-ilonggo-gold">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-ilonggo-gold uppercase font-bold mb-1">Mobile Number</label>
+                                <input type="tel" id="cust-phone" required placeholder="+971 50 xxx xxxx" class="w-full px-4 py-3 rounded-xl bg-ilonggo-woodDark border border-ilonggo-amber/30 text-xs text-white focus:outline-none focus:border-ilonggo-gold">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] text-ilonggo-gold uppercase font-bold mb-1">Service Type</label>
+                                <select id="cust-service" class="w-full px-4 py-3 rounded-xl bg-ilonggo-woodDark border border-ilonggo-amber/30 text-xs text-ilonggo-cream focus:outline-none focus:border-ilonggo-gold">
+                                    <option value="Dine-in Reservation">Dine-in Table Reservation</option>
+                                    <option value="Home Delivery Order">Home Delivery Order</option>
+                                    <option value="Boodle Fight Booking">Boodle Fight Group Feast</option>
+                                    <option value="Party Tray Catering">Party Tray Catering</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-ilonggo-gold uppercase font-bold mb-1">Preferred Time / Date</label>
+                                <input type="text" id="cust-time" placeholder="Today at 7:00 PM" class="w-full px-4 py-3 rounded-xl bg-ilonggo-woodDark border border-ilonggo-amber/30 text-xs text-white focus:outline-none focus:border-ilonggo-gold">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] text-ilonggo-gold uppercase font-bold mb-1">Special Dishes or Notes</label>
+                            <textarea id="cust-notes" rows="3" placeholder="Specify dishes (Inasal, Batchoy, Crispy Pata) or address for delivery..." class="w-full px-4 py-3 rounded-xl bg-ilonggo-woodDark border border-ilonggo-amber/30 text-xs text-white focus:outline-none focus:border-ilonggo-gold"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-ilonggo-amber via-ilonggo-gold to-ilonggo-amber text-ilonggo-woodDark font-display font-extrabold text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-lg shadow-ilonggo-amber/30">
+                            Submit Order / Reservation
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-ilonggo-amber/20 text-center text-xs text-ilonggo-cream/60 bg-ilonggo-woodDark">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span>© 2026 Kusina Ilonggo's Filipino Restaurant - Ras Al Khaimah. All Rights Reserved.</span>
+            <div class="flex gap-4 text-ilonggo-gold">
+                <a href="tel:+971504082088" class="hover:underline"><i class="fa-solid fa-phone mr-1"></i>+971 50 408 2088</a>
+                <a href="https://maps.google.com/?cid=17186753612417891480" target="_blank" class="hover:underline"><i class="fa-solid fa-map-pin mr-1"></i>Al Nakheel, RAK</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menu Filtering Logic
+        function filterMenu(category) {
+            const items = document.querySelectorAll('.menu-item');
+            const tabs = document.querySelectorAll('.menu-tab');
+
+            // Update Tab Active Style
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-ilonggo-amber', 'text-ilonggo-woodDark');
+                tab.classList.add('glass-card', 'text-ilonggo-cream');
+            });
+
+            event.target.classList.remove('glass-card', 'text-ilonggo-cream');
+            event.target.classList.add('bg-ilonggo-amber', 'text-ilonggo-woodDark');
+
+            // Show/Hide Grid Items
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit() {
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const service = document.getElementById('cust-service').value;
+
+            alert('Salamat, ' + name + '! Your ' + service + ' request has been submitted. Kusina Ilonggo team will call ' + phone + ' shortly.');
+        }
+    </script>
+</body>
+</html>
